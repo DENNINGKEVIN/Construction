@@ -11,123 +11,131 @@
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <title>Jenga</title>
 </head>
 
 <body>
 
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <!-- Brand/logo -->
-    <a class="navbar-brand" href="#">
 
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning " id="navbar">
+    <a class="navbar-brand" href="#">
       <h1>Jenga</h1>
     </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <!-- Links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Sign up</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Log in</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link 3</a>
-      </li>
-      <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="search">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <form id="search" class="form-inline">
-          <input class="form-control mr-sm-2" style="opacity: 1" type="text" placeholder="Search">
-          <button class="btn btn-warning" style="opacity: 1" type="submit">Search</button>
-        </form>
-      </nav>
-    </ul>
+    <div class="collapse navbar-collapse"  id="navbarSupportedContent1">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sign in</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sign out</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
+    <a class="navbar-brand" href="#">
+      <img src="Images/logo.jpeg" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Services</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Finishing Products
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item " href="#">Paint</a>
+            <a class="dropdown-item " href="#">Tiles</a>
+            <a class="dropdown-item " href="#">Ceilings</a>
+            <a class="dropdown-item " href="#">Sinks</a>
+            <a class="dropdown-item " href="#">Windows</a>
+            <a class="dropdown-item " href="#">Tanks</a>
+            <a class="dropdown-item " href="#">Wallpaper</a>
+            <a class="dropdown-item " href="#">Gutters</a>
+            <a class="dropdown-item " href="#">Gypsum</a>
+            <a class="dropdown-item " href="#">Showers</a>
+            <a class="dropdown-item " href="#">Housing Appliances</a>
+
+
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Products
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item " href="#">Ballast</a>
+            <a class="dropdown-item " href="#">Sand</a>
+            <a class="dropdown-item " href="#">Cement</a>
+            <a class="dropdown-item " href="#">Steel Bars</a>
+            <a class="dropdown-item " href="#">Building Stones</a>
+            <a class="dropdown-item " href="#">Building Blocks</a>
+            <a class="dropdown-item " href="#">Gravel</a>
+            <a class="dropdown-item " href="#">Mazeras</a>
+            <a class="dropdown-item " href="#">Timber</a>
+            <a class="dropdown-item " href="#">Logs</a>
+            <a class="dropdown-item " href="#">Dust Nets</a>
+            <a class="dropdown-item " href="#">Bricks</a>
+            <a class="dropdown-item " href="#">Iron Sheets</a>
+            <a class="dropdown-item " href="#">Scaffoling</a>
+            <a class="dropdown-item " href="#">Panes</a>
+            <a class="dropdown-item " href="#">Slabs</a>
+            <a class="dropdown-item " href="#">Binding Wire</a>
+            <a class="dropdown-item " href="#">Roofing</a>
+
+
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            Equipments
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item " href="#">Concrete Mixer</a>
+            <a class="dropdown-item " href="#">Wheelbarrow</a>
+            <a class="dropdown-item " href="#">Shovel</a>
+
+          </div>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Sign out</a>
+        </li> -->
+      </ul>
+
+    </div>
   </nav>
 
-  <nav class="navbar navbar-expand-lg bg-light navbar-black sticky-top justify-content-center">
-    <!-- Brand -->
-
-    <img src="./Images/logo.jpeg" alt="logo" style="width:130px;" style="opacity: 0.5" id="img">
-    <!-- Links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link nav2" href="#">About us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link nav2" href="#">Services</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link nav2" href="#">Team</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link nav2" href="#">Blog</a>
-      </li>
-      <!-- Dropdown -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          Products
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item " href="#">Ballast</a>
-          <a class="dropdown-item " href="#">Sand</a>
-          <a class="dropdown-item " href="#">Cement</a>
-          <a class="dropdown-item " href="#">Steel Bars</a>
-          <a class="dropdown-item " href="#">Building Stones</a>
-          <a class="dropdown-item " href="#">Building Blocks</a>
-          <a class="dropdown-item " href="#">Gravel</a>
-          <a class="dropdown-item " href="#">Mazeras</a>
-          <a class="dropdown-item " href="#">Timber</a>
-          <a class="dropdown-item " href="#">Logs</a>
-          <a class="dropdown-item " href="#">Dust Nets</a>
-          <a class="dropdown-item " href="#">Bricks</a>
-          <a class="dropdown-item " href="#">Iron Sheets</a>
-          <a class="dropdown-item " href="#">Scaffoling</a>
-          <a class="dropdown-item " href="#">Panes</a>
-          <a class="dropdown-item " href="#">Slabs</a>
-          <a class="dropdown-item " href="#">Binding Wire</a>
-          <a class="dropdown-item " href="#">Roofing</a>
 
 
-        </div>
-      </li>
-      <!-- Dropdown -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          Finishing Products
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item " href="#">Paint</a>
-          <a class="dropdown-item " href="#">Tiles</a>
-          <a class="dropdown-item " href="#">Ceilings</a>
-          <a class="dropdown-item " href="#">Sinks</a>
-          <a class="dropdown-item " href="#">Windows</a>
-          <a class="dropdown-item " href="#">Tanks</a>
-          <a class="dropdown-item " href="#">Wallpaper</a>
-          <a class="dropdown-item " href="#">Gutters</a>
-          <a class="dropdown-item " href="#">Gypsum</a>
-          <a class="dropdown-item " href="#">Showers</a>
-          <a class="dropdown-item " href="#">Housing Appliances</a>
 
 
-        </div>
-      </li>
-      <!-- Dropdown -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          Equipments
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item " href="#">Concrete Mixer</a>
-          <a class="dropdown-item " href="#">Wheelbarrow</a>
-          <a class="dropdown-item " href="#">Shovel</a>
 
-        </div>
-      </li>
-    </ul>
-  </nav>
- 
   
-
+  
 </body>
 
 </html>
