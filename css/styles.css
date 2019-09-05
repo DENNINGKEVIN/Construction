@@ -283,3 +283,51 @@ a {
   color: white;
   text-align: center;
 }
+
+
+  
+#navbar{
+  font-size: 30px;
+  color: wheat;
+}
+#navbar img{
+  border-radius: 50%;
+  width: 40%;
+}
+#kwanza{
+  font-family: italics;
+  font-size: 40px;
+}
+#prime{
+  font-size: 30px;
+  color:gold;
+  font-weight: bold;
+}
+#prime{
+  /* animation: heartbeat 4s infinite; */
+  animation: mymove 5s infinite;
+  padding: 4%;
+}
+@keyframes mymove {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-55px);
+  }
+  60% {
+    transform: translateY(-45px);
+  }
+  
+}
+.display-4{
+  text-align: center;
+  color:goldenrod;
+}
+.jumbotron{
+  margin-top:17px;
+}
