@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/jquery-3.4.1.js"></script>
   <script src="js/scripts.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -9,6 +12,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="./css/stylescategories.css">
+  <link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,9 +23,9 @@
 
 <body>
 
-
+<div class="font">
   <nav class="navbar navbar-expand-lg navbar-light bg-warning " id="navbar">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="index.html">
       <h1>Jenga</h1>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
@@ -28,26 +33,26 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse"  id="navbarSupportedContent1">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Sign in</a>
+          <a class="nav-link" href="login.html">Log in</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Sign out</a>
+          <a class="nav-link" href="login.html">Sign up</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <form action="https://www.google.com/search" method="Get" class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
   </nav>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar">
-    <a class="navbar-brand" href="#">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar" style="opacity: 0.8;">
+    <a class="navbar-brand" href="index.html">
       <img src="Images/logo.jpeg" alt="">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2"
@@ -58,84 +63,570 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent2">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#about">About Us <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" href="#serve">Services</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-            Finishing Products
-          </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item " href="#">Paint</a>
-            <a class="dropdown-item " href="#">Tiles</a>
-            <a class="dropdown-item " href="#">Ceilings</a>
-            <a class="dropdown-item " href="#">Sinks</a>
-            <a class="dropdown-item " href="#">Windows</a>
-            <a class="dropdown-item " href="#">Tanks</a>
-            <a class="dropdown-item " href="#">Wallpaper</a>
-            <a class="dropdown-item " href="#">Gutters</a>
-            <a class="dropdown-item " href="#">Gypsum</a>
-            <a class="dropdown-item " href="#">Showers</a>
-            <a class="dropdown-item " href="#">Housing Appliances</a>
-
-
-          </div>
+        <li class="nav-item">
+          <a class="nav-link" href="#contacts">Contact Us</a>
         </li>
+
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
             Products
           </a>
           <div class="dropdown-menu">
-            <a class="dropdown-item " href="#">Ballast</a>
-            <a class="dropdown-item " href="#">Sand</a>
-            <a class="dropdown-item " href="#">Cement</a>
-            <a class="dropdown-item " href="#">Steel Bars</a>
-            <a class="dropdown-item " href="#">Building Stones</a>
-            <a class="dropdown-item " href="#">Building Blocks</a>
-            <a class="dropdown-item " href="#">Gravel</a>
-            <a class="dropdown-item " href="#">Mazeras</a>
-            <a class="dropdown-item " href="#">Timber</a>
-            <a class="dropdown-item " href="#">Logs</a>
-            <a class="dropdown-item " href="#">Dust Nets</a>
-            <a class="dropdown-item " href="#">Bricks</a>
-            <a class="dropdown-item " href="#">Iron Sheets</a>
-            <a class="dropdown-item " href="#">Scaffoling</a>
-            <a class="dropdown-item " href="#">Panes</a>
-            <a class="dropdown-item " href="#">Slabs</a>
-            <a class="dropdown-item " href="#">Binding Wire</a>
-            <a class="dropdown-item " href="#">Roofing</a>
+            <a class="dropdown-item " href="products.html#build">Building products</a>
+            <a class="dropdown-item " href="products.html#equip">Eqiupments</a>
+            <a class="dropdown-item " href="products.html#fit">Fittings</a>
+            <a class="dropdown-item " href="products.html#drain">Drainage and Plumbing</a>
+            <a class="dropdown-item " href="products.html#electrical">Electical appliances</a>
+            <a class="dropdown-item " href="products.html#finish">Finishing products</a>
 
 
           </div>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-            Equipments
-          </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item " href="#">Concrete Mixer</a>
-            <a class="dropdown-item " href="#">Wheelbarrow</a>
-            <a class="dropdown-item " href="#">Shovel</a>
 
-          </div>
-        </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="#">Sign out</a>
-        </li> -->
+
       </ul>
 
     </div>
   </nav>
 
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="./Images/workshop.jpg" alt="workshop" style="width:100%; height: 400px;">
+        <div class="carousel-caption ">
+          <h2 id="kwanza">QUALITY CONSTRUCTION MADE EASY.</h2>
+          <p id="prime"> Buy, compare and browse building materials from over 100 suppliers all over the country.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="./Images/materials.png" alt="supply" style="width:100%;height: 400px;">
+        <div class="carousel-caption">
+          <h2 id="kwanza">HIGHLIGHTED MATERIALS</h2>
+          <p id="prime">Before you buy or order your materials, stop to review our highlighted materials to get new and
+            updated varieties from all of our suppliers</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="./Images/slide2.jpg" alt="house" style="width:100%; height: 400px;">
+        <div class="carousel-caption">
+          <h2 id="kwanza">PROFFESIONAL OUTCOME</h2>
+          <p id="prime">Get the best and professional outcome from our suppliers through quality and effecient products
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <div class="jumbotron jumbotron-fluid" id="about">
+    <div class="container">
+      <h1 class="display-4">About Us</h1>
+      <p class="lead">
+        JENGA Ltd is the first and leading linking company based in Kenya that
+        specializes in support services to the construction material companies
+        and customers in the construction industry. At Jenga, We offer quality
+        assurance and integrated services to our clients in both the private
+        and public sectors. Adding value to the construction industry is the
+        foundation of what we do. Save time, optimize costs, and get the best
+        services for your projects in Kenya.
+      </p>
+    </div>
+  </div>
+  <h1 class="display-4">HOT DEALS</h1>
+  <div class="container-fluid">
+    <div class="back">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="con">
+              <img class="card-img-top" src="./Images/material5.jpeg" alt="">
+              <div class="overlay">
+
+                <div class="deal" class="card-body">
+                  <header>PIPES</header>
+                  <p>Was <strike> <span class="was">12000</span> </strike></p>
+                  <p>Now <span class="is">9000</span> </p>
+                  <button class="bg-warning" type="button" data-toggle="modal"
+                    data-target="#exampleModalCenter">Order</button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="con">
+              <img class="card-img-top" src="./Images/material4.jpg" alt="">
+              <div class="overlay">
+
+                <div class="deal" class="card-body">
+                  <header>BRICKS RED</header>
+                  <p>Was <strike> <span class="was">2000</span> </strike></p>
+                  <p>Now <span class="is">1000</span> </p>
+                  <button class="bg-warning" type="button" data-toggle="modal"
+                    data-target="#exampleModalCenter">Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="con">
+              <img class="card-img-top" src="./Images/wood2.jpg" alt="">
+              <div class="overlay">
+                <div class="deal" class="card-body">
+                  <header>WOOD</header>
+                  <p>Was <strike> <span class="was">8000</span> </strike></p>
+                  <p>Now <span class="is">3000</span> </p>
+                  <button class="bg-warning" type="button" data-toggle="modal"
+                    data-target="#exampleModalCenter">Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><br><br>
+
+
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="con">
+              <img class="card-img-top" src="./Images/material3.jpeg" alt="">
+              <div class="overlay">
+                <div class="deal" class="card-body" class="mymove1">
+                  <header>STEEL</header>
+                  <p>Was <strike> <span class="was">780</span> </strike></p>
+                  <p>Now <span class="is">99</span> </p>
+                  <button class="bg-warning" type="button" data-toggle="modal"
+                    data-target="#exampleModalCenter">Order</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class=" col-sm-4 ">
+          <div class="card">
+            <div class="con">
+              <img class="card-img-top" src="./Images/bull.jpg" alt="">
+              <div class="overlay">
+                <div class="deal" class="card-body">
+                  <header>EXCAVATOR</header>
+                  <p>Was <strike> <span class="was">1100</span> </strike></p>
+                  <p>Now <span class="is">800</span> </p>
+                  <button class="bg-warning" type="button" data-toggle="modal"
+                    data-target="#exampleModalCenter">Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class=" col-sm-4 ">
+          <div class="card">
+            <div class="con">
+              <img class="card-img-top" src="./Images/material2.jpeg" alt="" height="">
+              <div class="overlay">
+
+                <div class="deal" class="card-body">
+                  <header>METAL PIPES</header>
+                  <p>Was <strike> <span class="was">2000</span> </strike></p>
+                  <p>Now <span class="is">1000</span> </p>
+                  <button class="bg-warning" type="button" data-toggle="modal"
+                    data-target="#exampleModalCenter">Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br><br><br>
 
 
 
 
 
-  
-  
+        <div class=" col-sm-4 ">
+          <div class="card">
+            <div class="con">
+              <img class="card-img-top" src="./Images/binding2.jpg" alt="">
+              <div class="overlay">
+
+                <div class="deal" class="card-body">
+                  <header>BINDING WIRE</header>
+                  <p>Was <strike> <span class="was">6000</span> </strike></p>
+                  <p>Now <span class="is">4000</span> </p>
+                  <button class="bg-warning" type="button" data-toggle="modal"
+                    data-target="#exampleModalCenter">Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 ">
+          <div class="card">
+            <div class="con">
+              <img class="card-img-top" src="./Images/slides/cement.jpg" alt="">
+              <div class="overlay">
+
+                <div class="deal" class="card-body">
+                  <header>CEMENT</header>
+                  <p>Was <strike> <span class="was">8000</span> </strike></p>
+                  <p>Now <span class="is">5000</span> </p>
+                  <button class="bg-warning" type="button" data-toggle="modal"
+                    data-target="#exampleModalCenter">Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="con">
+              <img class="card-img-top" src="./Images/slides/clay-bricks.jpg" alt="">
+              <div class="overlay">
+
+                <div class="deal" class="card-body">
+                  <header>BRICKS BROWN</header>
+                  <p>Was <strike> <span class="was">2000</span> </strike></p>
+                  <p>Now <span class="is">1000</span> </p>
+                  <button class="bg-warning" type="button" data-toggle="modal"
+                    data-target="#exampleModalCenter">Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <h1 class="display-4" style="padding: 2%;">PRODUCT MATERIALS</h1>
+  <div class="container-fluid">
+    <div class="row" class="flip">
+      <div class="col-md-2.5" style="padding: 0.2%;">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="Images/electric.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back bg-dark">
+              <h1>ELECRICAL APPLIANCES</h1>
+              <a href="products.html" class="btn btn-warning" style="color: black;">View</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2.5" style="padding: 0.2%;">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="Images/equip.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back bg-dark">
+              <h1>BUILDING EQUIPMENTS</h1>
+              <a href="products.html" class="btn btn-warning" style="color: black;">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2.5" style="padding: 0.2%;">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="Images/finish.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back bg-dark">
+              <h1>FINISHING MATERIALS</h1>
+              <a href="products.html" class="btn btn-warning" style="color: black;">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2.5" style="padding: 0.2%;">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="Images/fitting.jpg" alt="Avatar" style="width:300px;height:300px;" class="img-thumbnail">
+            </div>
+            <div class="flip-card-back bg-dark">
+              <h1>FITTING MATERIALS</h1>
+              <a href="products.html" class="btn btn-warning" style="color: black;">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2.5" style="padding: 0.2%;">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="Images/plumbe.png" alt="Avatar" style="width:300px;height:300px;" class="img-thumbnail">
+            </div>
+            <div class="flip-card-back bg-dark">
+              <h1>PLUMBING MATERIALS</h1>
+              <a href="products.html" class="btn btn-warning" style="color: black;">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2.5" style="padding: 0.2%;">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="Images/materials.jpg" alt="Avatar" style="width:300px;height:300px;" class="img-thumbnail">
+            </div>
+            <div class="flip-card-back bg-dark">
+              <h1>BUILDING MATERIALS</h1>
+              <a href="products.html" class="btn btn-warning" style="color: black;">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 
+  <div class="form-control-range bg-warning" style="text-align: center;">
+    <h1 id="">POPULAR CATEGORIES</h1>
+  </div> -->
+  <!-- <div class="container-fluid d-flex jumbotron bg-dark " id="container1" style="opacity: 0.8">
+    <div class="flexslider left">
+      <ul class="slides">
+        <li>
+          <img src="Images/PVC-Pipe-Fitting.jpeg" height="500px">
+          <div class="meta">
+            <h1></h1>
+            <h2></h2>
+            <div class="category">
+              <p>Kshs 1,000</p>
+              <span><button><a href="products.html">FITTING</a></button></span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="Images/sand.jpg" height="500px">
+          <div class="meta">
+            <h1></h1>
+            <h2></h2>
+            <div class="category">
+              <p>Kshs 38,000 per 20tonnes</p>
+              <span><button><a href="products.html">BUILDING MATERIALS</a></button></span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="Images/concrete-mixer.jpg" height="500px">
+          <div class="meta">
+            <h1></h1>
+            <h2></h2>
+            <div class="category">
+              <p>Kshs 120,000</p>
+              <span><button><a href="products.html">EQUIPMENT</a></button></span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="Images/tile5.jpg" height="500px">
+          <div class="meta">
+            <h1></h1>
+            <h2></h2>
+            <div class="category">
+              <p>Kshs 600/m2</p>
+              <span><button><a href="products.html">FINISHING</a></button></span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.0/jquery.flexslider-min.js"></script>
+  <script>
+    $('.flexslider').flexslider({
+      animation: "slide",
+      controlNav: false
+    });
+  </script> -->
+
+
+  <div class="container-fluid bg-dark">
+    <div id="serve">
+      <h1 class="display-4" style="padding: 2%;">Services</h1>
+      <div class="row text-center">
+        <div class="col-md-4 main">
+          <img src="Images/expert.jpg" alt="Market Expertise" class="show img-fluid">
+
+          <div class="hide">
+            <h2>Market Expertise</h2>
+            <p>Construction regulations and labor laws around the world vary greatly, and we have experts around to give
+              you the best quality destinations to buy your materials for the required standards. We do regular research
+              to make sure that our
+              clients get the best out of the best.</p>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-md-4 main">
+          <img src="Images/schedule1.png" alt="Scheduling" class="show img-fluid">
+
+          <div class="hide">
+            <h2>Scheduling</h2>
+            <p>At Jenga, we schedule our clients the best time that they are available. This makes it more convenient
+              and saves time for our clients. Its the joy of every client when he/she gets the required materials at the
+              required time. We as
+              Jenga facilitate this by making sure that all of our materials clients are always on time when required by
+              the customers.</p>
+
+          </div>
+
+        </div>
+        <div class="col-md-4 main">
+          <img src="Images/market-watch.jpg" alt="market watch" class="show img-fluid">
+
+          <div class="overlay">
+            <a href="#" class="icon" title="User Profile">
+              <i class="fas fa-hand-pointer"></i>
+            </a>
+          </div>
+          <div class="hide">
+            <h2>Global market watch</h2>
+            <p>We rely on advanced technology to deliver a 100% transition between the material companies and the
+              customers. Our salespersons around the nation do more research on the modern materials that are widely
+              used so that we replicate the
+              same to our clients. This keeps them updated on the required and most adored type and quality of materials
+              required by most customers.</p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div id="contact">
+    <div class="container">
+      <div id="headingContact">
+        <h1 class="intro">GET IN TOUCH</h1>
+
+      </div>
+      <div id="form">
+        <form id="contactForm"
+          action="https://gmail.us4.list-manage.com/subscribe/post?u=22bae8a576e7f2692810e1a74&amp;id=2713f25960"
+          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+          target="_blank">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="email">Name:</label>
+              <input type="text" id="name" class="form-control" placeholder="Name">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="email">Email address:</label>
+              <input type="email" id="email" class="form-control" placeholder="Email" style="color: white;">
+
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Message:</label>
+            <textarea id="message" class="form-control" rows="7" placeholder="Your message here .."></textarea>
+          </div>
+          <div id="contactBtn" class="form-group">
+            <button type="submit" id="btnSubmit" class="btn btn-outline-warning">SUBMIT</button>
+          </div>
+        </form>
+
+      </div>
+      <div class="middle">
+        <a id="btn" href=""><img src="./Images/social icon/twitter.png" alt="twitter"></a>
+        <a id="btn" href=""><img src="./Images/social icon/facebook.png" alt="facebook"></a>
+        <a id="btn" href=""><img src="./Images/social icon/g_plus.png" alt="g_plus"></a>
+        <a id="btn" href=""><img src="./Images/social icon/skype.png" alt="skype"></a>
+      </div>
+      <div class="row" id="contacts">
+        <div class="cardy" class="card">
+          <div class="cardy-title" class="card-title">
+            <h2>CONTACTS</h2>
+          </div>
+          <div class="cardy-body" class="card-body">
+            <p><i class="fas fa-home"></i> Brook lane Drive, ghetto, Nairobi</p>
+            <p><i class="fas fa-phone"> </i> +254709875455</p>
+            <p><i class="fas fa-envelope"> </i> jenga@gmail.com</p>
+            <p><i class="fab fa-twitter"></i> @Jenga</p>
+          </div>
+        </div>
+      </div><br>
+
+
+    </div>
+
+  </div>
+
+  </div>
+</div>
 </body>
+<script src="./js/jQuery.js"></script>
+<script src="./js/bootstrap.js"></script>
+<script src="./js/mdb.js"></script>
+<script src="./js/scripts.js"></script>
 
 </html>

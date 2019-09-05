@@ -1,51 +1,285 @@
-body{
-  background-color:whitesmoke;
+body {
+  background-color: whitesmoke;
+  font-family: 'Livvic', sans-serif;
 }
-h1{
-  font-family: 'Alfa Slab One', cursive;  
+.font{
+  font-family: 'Livvic', sans-serif;
 }
-h2{
-  font-family: 'Alfa Slab One', cursive;  
-  text-align: center;
-  font-size: 50px;
+
+h1 {
+  font-family: 'Alfa Slab One', cursive;
+}
+
+#navbar {
+  font-size: 30px;
+  color: wheat;
+}
+
+#navbar img {
+  border-radius: 50%;
+  width: 40%;
+}
+
+#kwanza {
+  font-family: italics;
+  font-size: 40px;
+}
+
+#prime {
+  font-size: 30px;
+  color: gold;
+  font-weight: bold;
+}
+
+#prime {
+  /* animation: heartbeat 4s infinite; */
+  animation: mymove 5s infinite;
   padding: 4%;
-
 }
-h3{
-  font-family: 'Alfa Slab One', cursive;  
+
+@keyframes mymove {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-55px);
+  }
+  60% {
+    transform: translateY(-45px);
+  }
+}
+
+.display-4 {
   text-align: center;
-
+  color: goldenrod;
 }
 
-#collapse{
+.jumbotron {
+  margin-top: 17px;
+}
+
+.con {
+  position: relative;
+}
+
+.img-fluid {
+  display: block;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: gray;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+  opacity: 0.8;
+}
+
+.con:hover .overlay {
+  height: 100%;
+}
+
+.deal {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   text-align: center;
 }
-.nav2{
- color: black;
+
+.back {
+  background-color: whitesmoke;
 }
-a{
+
+#hot {
+  text-align: center;
+  color: white;
+  padding: -2%;
+  background-color: black;
+  opacity: 0.7;
+}
+
+.was {
+  color: red;
+  font-size: 30px;
+}
+
+.is {
+  color: darkgreen;
+  font-size: 40px;
+}
+
+.hide {
+  display: none;
+  color: azure;
+}
+
+/* mel */
+
+body {
+  background-color: whitesmoke;
+  padding: 0;
+  margin: 0;
+}
+
+.middle {
+  /* position: absolute; */
+  top: 60%;
+  transform: translate(-50%);
+  width: 100%;
+  text-align: center;
+  margin-left: 50%;
+}
+
+#btn {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background: #f1f1f1;
+  margin: 10px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #3498db;
+  overflow: hidden;
+  position: relative;
+}
+
+#btn img {
+  line-height: 90px;
+  font-size: 26px;
+  transition: 0.2s;
+  margin-top: 25%;
+}
+
+#btn:hover img {
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+
+#btn::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: goldenrod;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+#btn:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+@keyframes aaa {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+  100% {
+    left: -10%;
+    top: -10%;
+  }
+}
+
+h1 {
+  font-family: 'Alfa Slab One', cursive;
+}
+
+.nav2 {
   color: black;
 }
 
-#img1{
+a {
+  color: black;
+}
+
+#img {
+  border-radius: 80%;
+}
+
+#img1 {
   float: left;
 }
+
 .carousel-inner img {
   width: 100%;
   height: 100%;
 }
-.card-img-overlay{
+
+#contact {
+  background-image: url(../Images/contactbg.jpg);
+}
+
+#headingContact {
+  text-align: center;
+  color: whitesmoke;
+  padding: 5%;
+}
+
+#form {
+  color: whitesmoke;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 16%;
+}
+
+#contactBtn {
+  text-align: center;
+}
+
+#showOrders {
   display: none;
 }
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+
+.myOrders {
+  cursor: pointer;
 }
-#navbar{
-  font-size: 30px;
-  color: wheat;
+
+.myOrders:hover {
+  text-decoration: underline;
 }
-#navbar img{
-  border-radius: 50%;
-  width: 40%;
+
+#showTotal {
+  text-align: center;
+}
+.cardy-body{
+  display:flex;
+  justify-content: space-around;
+}
+.cardy-body p{
+  padding: 12px;
+  color: white;
+  background-color: lightslategrey;
+  border-radius: 25px;
+  font-family: 'Alfa Slab One', cursive;
+}
+.cardy{
+  width: 100%;
+  border-radius: 25px;
+  margin-top: 10px;
+  background-color:whitesmoke;
+}
+.cardy-title{
+  border-radius: 25px;
+  background-color: lightslategray;
+  padding-left: 18px;
+  padding-top: 18px;
+  color: white;
+  text-align: center;
 }

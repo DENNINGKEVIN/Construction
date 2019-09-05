@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="/Construction/js/jquery-3.4.1.js"></script>
+  <script src="/js/scripts.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/stylesproducts.css" />
+  <link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet" />
+  <title>Jenga</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning " id="navbar">
+    <a class="navbar-brand" href="index.html">
+      <h1>Jenga</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">log in</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="signup.html">Sign up</a>
+        </li>
+      </ul>
+      <form action="https://www.google.com/search" method="Get" class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="opacity: 0.8;" id="navbar">
+    <a class="navbar-brand" href="index.html">
+      <img src="Images/logo.jpeg" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html#about">About Us <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#serve">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#contacts">Contact Us</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+            Products
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item " href="#build">Building products</a>
+            <a class="dropdown-item " href="#equip">Eqiupments</a>
+            <a class="dropdown-item " href="#fit">Fittings</a>
+            <a class="dropdown-item " href="#drain">Drainage and Plumbing</a>
+            <a class="dropdown-item " href="#electrical">Electical appliances</a>
+            <a class="dropdown-item " href="#finish">Finishing</a>
+
+
+          </div>
+        </li>
+
+
+      </ul>
+
+    </div>
+  </nav>
+
+  <div style="padding: 1%;" id="bounce">
+    <a class="btn float-right" href="#" data-toggle="modal" data-target="#exampleModal"
+      style="font-size: 30px; color: goldenrod;">SHOPPING CART
+      <img src="Images/shoppingCart.svg" alt="logo">
+    </a>
+  </div>
+
+  <div class="container">
+    <div class="container" id="finishingHeading">
+      <h2 class="intro"></h2>
+      <!-- <a class="btn float-right" href="#" data-toggle="modal" data-target="#exampleModal">
+        <img src="Images/shoppingCart.svg" alt="logo">
+      </a> -->
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">SHOPPING CART</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <table id="newOrderList" class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>DELETE</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                </tbody>
+              </table>
+
+
+              <hr>
+              <div id="showOrders" class="container jumbotron shadow-lg p-4 mb-4 bg-white">
+                <h2></h2>
+                <hr>
+                <p>Product Name : <span id="productOrdered"></span></p>
+                <p>Quantity : <span id="quantityOrdered"></span></p>
+                <p>Total amount : <span id="totalPrice"></span></p>
+
+              </div>
+
+              <hr>
+
+              <div id="showTotal" class="card shadow-lg p-4 mb-4 bg-white">
+                <div class="card-body">
+                  <h3 class="card-title intro">TOTAL AMOUNT</h3>
+                  <p class="card-text"><span id="totalPay"></span></p>
+                </div>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" id="checkoutBtn" class="btn btn-warning" data-dismiss="modal">CHECKOUT</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div style="padding: 2%;" id="finish">
+    <h1 class="display-5">FINISHING</h1>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card img-thumbnail" style="width:250px">
+          <img class="card-img-top rounded" src="Images/tile5.jpg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">Desert Floor Tile</h4>
+
+            <p class="card-text">Price : Kshs 600 <span class="text-muted">/m2</span></p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#demo1">MORE</a>
+
+            <div id="demo1" class="collapse multi-collapse">
+              <hr>
+              <p>Description: Kilimanjaro porcelein matte tile. </p>
+              <p>Store location: Tim's Hardware, Ngong Rd</p>
+              <p>Contact: 0734435656</p>
+
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#exampleModalLong">ORDER</a>
+              <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Desert Floor Tile</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="tileForm">
+                        <div class="form-group">
+                          <label for="quantity1">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantityTile" name="quantity1" required>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <!-- <a href="cart.html" id="tileBtn" class="btn btn-warning" type="submit">ADD TO CART</a> -->
+                      <button type="submit" id="tileBtn" class="btn btn-warning" data-dismiss="modal">ADD TO
+                        CART</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-3">
+        <div class="card" style="width:250px">
+          <img class="card-img-top rounded" src="Images/sink.jpg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">Kitchen Sink</h4>
+
+            <p class="card-text">Price : Kshs 8000 </p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#demo2">MORE</a>
+
+            <div id="demo2" class="collapse">
+              <hr>
+              <p>Description: Stainless steel sink. </p>
+              <p>Store location: Mark's Hardware, Ngong Rd</p>
+              <p>Contact: 0734489656</p>
+              <hr>
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#exampleModalLong1">ORDER</a>
+              <div class="modal fade" id="exampleModalLong1" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Kitchen Sink</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="sinkForm">
+                        <div class="form-group">
+                          <label for="quantity2">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantity2" name="quantity2">
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="submit" id="sinkBtn" class="btn btn-warning" data-dismiss="modal">ADD TO
+                        CART</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="col-md-3">
+        <div class="card img-thumbnail" style="width:250px">
+          <img class="card-img-top rounded" src="Images/ceiling.jpg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">Gypsum ceiling</h4>
+
+            <p class="card-text">Price : Kshs 2000 <span class="text-muted">/m2</span></p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#demo3">MORE</a>
+
+            <div id="demo3" class="collapse">
+              <hr>
+              <p>Description: Nova Gypsum decorated ceiling. </p>
+              <p>Store location: Luke's Hardware, Langata Rd</p>
+              <p>Contact: 0728896856</p>
+              <hr>
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#exampleModalLong3">ORDER</a>
+              <div class="modal fade" id="exampleModalLong3" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Gypsum Ceiling</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="ceilingForm">
+                        <div class="form-group">
+                          <label for="quantity3">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantity3" name="quantity3">
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="submit" id="ceilingBtn" class="btn btn-warning" data-dismiss="modal">ADD TO
+                        CARD</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="col-md-3">
+        <div class="card img-thumbnail" style="width:250px">
+          <img class="card-img-top rounded" src="Images/paint2.jpg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">Vinyl Paint</h4>
+
+            <p class="card-text">Price : Kshs 4500 <span class="text-muted">per can</span></p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#demo">MORE</a>
+
+            <div id="demo" class="collapse">
+              <hr>
+              <p>Description: High quality paint. </p>
+              <p>Store location: Omolo's Hardware, Langata Rd</p>
+              <p>Contact: 0728096856</p>
+              <hr>
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#exampleModalLong4">ORDER</a>
+              <div class="modal fade" id="exampleModalLong4" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Vinyl Paint</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="paintForm">
+                        <div class="form-group">
+                          <label for="quantity4">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantity4" name="quantity4">
+                        </div>
+                      </form>
+
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="submit" id="paintBtn" class="btn btn-warning" data-dismiss="modal">ADD TO
+                        CART</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+  <hr>
+  <div style="padding: 2%;" id="equip">
+    <h1 id="hot4" class="display-5">EQUIPMENTS</h1>
+    <div class="row">
+      <!-- concrete mixer -->
+      <div class="col-md-3">
+        <div class="card" style="width:250px">
+          <img class="card-img-top rounded" src="Images/concrete-mixer.jpg" alt="Card image" style="width:100%" />
+          <div class="card-body">
+            <h4 class="card-title">Concrete-mixer</h4>
+
+            <p class="card-text">Price : Kshs 120,000</p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#equip1">MORE</a>
+
+            <div id="equip1" class="collapse multi-collapse">
+              <hr />
+              <p>Description: Mixer.</p>
+              <p>Store location: Kamau Hardware, kinungi Rd</p>
+              <p>Contact: 0734435656</p>
+
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#equipment1">ORDER</a>
+              <div class="modal fade" id="equipment1" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        Concrete mixer
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="concreteForm">
+                        <div class="form-group">
+                          <label for="quantity1">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantityEquip1" name="quantityEquip1" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="submit" id="concreteBtn" class="btn btn-warning" data-dismiss="modal">
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Vibrator -->
+      <div class="col-md-3">
+        <div class="card" style="width:250px">
+          <img class="card-img-top rounded" src="Images/vibrator.jpg" alt="Card image" style="width:100%" />
+          <div class="card-body">
+            <h4 class="card-title">Vibrator</h4>
+
+            <p class="card-text">Price : Kshs 80,000</p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#equip2">MORE</a>
+
+            <div id="equip2" class="collapse multi-collapse">
+              <hr />
+              <p>Description: MVP Vibrator Poker. Top of the Range Poker Head Suitable for Professional Application.
+              </p>
+              <p>Store location: Patel holdings, luthuli Rd</p>
+              <p>Contact: 0720525253</p>
+
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#equipment2">ORDER</a>
+              <div class="modal fade" id="equipment2" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        vibrator
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="vibratorForm">
+                        <div class="form-group">
+                          <label for="quantity1">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantityEquip2" name="quantityEquip2" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="submit" id="vibratorBtn" class="btn btn-warning" data-dismiss="modal">
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- spirit-level -->
+      <div class="col-md-3">
+        <div class="card" style="width:250px">
+          <img class="card-img-top rounded" src="Images/spirit -level.jpeg" alt="Card image" style="width:100%" />
+          <div class="card-body">
+            <h4 class="card-title">Spirit-Levels</h4>
+
+            <p class="card-text">Price : Kshs 8,000</p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#equip3">MORE</a>
+
+            <div id="equip3" class="collapse multi-collapse">
+              <hr />
+              <p>Description: Precise Aluminum Frame and Magnetic Spirit Level, Model Number: Msl300</p>
+              <p>Store location: kware Hardware, Makadara Rd</p>
+              <p>Contact: 0720528595</p>
+
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#equipment3">ORDER</a>
+              <div class="modal fade" id="equipment3" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        spirit-level
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="spiritForm">
+                        <div class="form-group">
+                          <label for="quantity1">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantityEquip3" name="quantityEquip3" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="submit" id="spiritBtn" class="btn btn-warning" data-dismiss="modal">
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Shovels -->
+      <div class="col-md-3">
+        <div class="card" style="width:250px">
+          <img class="card-img-top rounded" src="Images/shovels.jpg" alt="Card image" style="width:100%" />
+          <div class="card-body">
+            <h4 class="card-title">Shovels</h4>
+
+            <p class="card-text">Price : Kshs. 490</p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#equip4">MORE</a>
+
+            <div id="equip4" class="collapse multi-collapse">
+              <hr />
+              <p>Description: Carbon Steel Head, Suregrip Handle, Improved Resistance to Rust & Scratches</p>
+              <p>Store location: Muturi suppliers, nyerere Rd</p>
+              <p>Contact: 0712345678</p>
+
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#equipment4">ORDER</a>
+              <div class="modal fade" id="equipment4" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        Shovel
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="shovelForm">
+                        <div class="form-group">
+                          <label for="quantity4">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantityEquip4" name="quantityEquip4" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="submit" id="shovelBtn" class="btn btn-warning" data-dismiss="modal">
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div style="padding: 2%;" id="build">
+    <h1 id="hot" class="display-5">BUILDING PRODUCTS</h1>
+    <div class="row">
+
+      <!-- sand -->
+      <div class="col-md-3">
+        <div class="card" style="width:250px">
+          <img class="card-img-top rounded" src="Images/sand.jpg" alt="Card image" style="width:100%" />
+          <div class="card-body">
+            <h4 class="card-title">Sand</h4>
+
+            <p class="card-text">Price : Kshs 38,000 per 20tonnes</p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#build1">MORE</a>
+
+            <div id="build1" class="collapse multi-collapse">
+              <hr />
+              <p>Description: With fine aggregate</p>
+              <p>Store location: Jiji constructors, Athi River</p>
+              <p>Contact: 0795789456</p>
+
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#buildingProduct1">ORDER</a>
+              <div class="modal fade" id="buildingProduct1" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        Sand
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="sandForm">
+                        <div class="form-group">
+                          <label for="quantity1">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantityBuild1" name="quantityBuild1" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="submit" id="sandBtn" class="btn btn-warning" data-dismiss="modal">
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blocks        -->
+      <div class="col-md-3">
+        <div class="card" style="width:250px">
+          <img class="card-img-top rounded" src="Images/blocks.jpg" alt="Card image" style="width:100%" />
+          <div class="card-body">
+            <h4 class="card-title">Blocks</h4>
+
+            <p class="card-text">Price : Kshs 38 each 9' inch
+              and Kshs.35 each 6' inch </p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#build2">MORE</a>
+
+            <div id="build2" class="collapse multi-collapse">
+              <hr />
+              <p>Description: 9' inch</p>
+              <p>Store location: Ndarugo mines, Juja</p>
+              <p>Contact: 0710147258</p>
+
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#buildingProduct2">ORDER</a>
+              <div class="modal fade" id="buildingProduct2" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        Blocks
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="blocksBtn">
+                        <div class="form-group">
+                          <label for="quantity1">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantityBuild2" name="quantityBuild2" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="submit" id="blocksBtn" class="btn btn-warning" data-dismiss="modal">
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- slabs -->
+      <div class="col-md-3">
+        <div class="card" style="width:250px">
+          <img class="card-img-top rounded" src="Images/slabs.jpeg" alt="Card image" style="width:100%" />
+          <div class="card-body">
+            <h4 class="card-title">Slabs</h4>
+
+            <p class="card-text">Price : Kshs 150 per metre square</p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#build3">MORE</a>
+
+            <div id="build3" class="collapse multi-collapse">
+              <hr />Images/sand.jpgImages/sand.jpg
+              <p>Description: Precast wall panels or floor/roofing slabs</p>
+              <p>Store location: Kumar makers, Mombasa Rd </p>
+              <p>Contact: 0796123852</p>
+
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#buildingProduct3">ORDER</a>
+              <div class="modal fade" id="buildingProduct3" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        Slab
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="slabsForm">
+                        <div class="form-group">
+                          <label for="quantity1">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantityBuild3" name="quantityBuild3" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="submit" id="slabsBtn" class="btn btn-warning" data-dismiss="modal">
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- bars -->
+      <div class="col-md-3">
+        <div class="card" style="width:250px">
+          <img class="card-img-top rounded" src="Images/bars.jpg" alt="Card image" style="width:100%" />
+          <div class="card-body">
+            <h4 class="card-title">Bars</h4>
+
+            <p class="card-text">Price :
+
+              Y10-
+              585
+              Y12-
+              810
+              Y16-
+              1540
+              Y25-
+              3800
+
+
+            </p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#build4">MORE</a>
+
+            <div id="build4" class="collapse multi-collapse">
+              <hr />
+              <p>Description:POWER STEEL TWISTED BARS. Y8 - 4.74 kg; Y10 - 7.39 kg; Y12 - 10.66 kg; Y16 - 18.95 kg;
+                Y20 - 29.59 kg; Y25 - 46.25 kg; S10 - 7.39 kg; S12 - 10.66 kg;</p>
+              <p>Store location: Tononoka steel bars, Dandora</p>
+              <p>Contact: 0774456123</p>
+
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#buildingProduct4">ORDER</a>
+              <div class="modal fade" id="buildingProduct4" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        Bars
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="barsForm">
+                        <div class="form-group">
+                          <label for="quantity1">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantityBuild4" name="quantityBuild4" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="submit" id="barsBtn" class="btn btn-warning" data-dismiss="modal">
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- End of Building Products -->
+  <hr>
+  <!-- FITTINGS -->
+  <div style="padding: 2%;" id="fit">
+    <h1 id="hot1" class="display-5">FITTINGS</h1>
+    <div class="row">
+
+      <!-- pvc fittings -->
+      <div class="col-md-3">
+        <div class="card" style="width:250px">
+          <img class="card-img-top rounded" src="Images/PVC-Pipe-Fitting.jpeg" alt="Card image" style="width:100%" />
+          <div class="card-body">
+            <h4 class="card-title">PVC Fittings</h4>
+
+            <p class="card-text">Price : Sold per type of PVC at the main shop</p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#fit1">MORE</a>
+
+            <div id="fit1" class="collapse multi-collapse">
+              <hr />
+              <p>Description: All PVC types available</p>
+              <p>Store location: Kinoko Ltd. Industrial Area</p>
+              <p>Contact: 0795789456</p>
+
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#fittingProduct1">ORDER</a>
+              <div class="modal fade" id="fittingProduct1" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        PVC Fittings
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="pvcForm">
+                        <div class="form-group">
+                          <label for="quantity1">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantityFit1" name="quantityFit1" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="submit" id="pvcBtn" class="btn btn-warning" data-dismiss="modal">
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- pipe-supporters        -->
+      <div class="col-md-3">
+        <div class="card" style="width:250px">
+          <img class="card-img-top rounded" src="Images/pipe-supporters.jpg" alt="Card image" style="width:100%" />
+          <div class="card-body">
+            <h4 class="card-title">Pipe-Supporters</h4>
+
+            <p class="card-text">Price : Kshs 15 each small inch
+              & sh.20 each large inch </p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#fit2">MORE</a>
+
+            <div id="fit2" class="collapse multi-collapse">
+              <hr />
+              <p>Description: Different inches</p>
+              <p>Store location: Kianjogoma Ltd, Kasarani</p>
+              <p>Contact: 0710147258</p>
+
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#fittingProduct2">ORDER</a>
+              <div class="modal fade" id="fittingProduct2" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        Pipe-Supporters
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="pipeForm">
+                        <div class="form-group">
+                          <label for="quantity1">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantityFit2" name="quantityFit2" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="submit" id="pipeBtn" class="btn btn-warning" data-dismiss="modal">
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Door fittings  -->
+      <div class="col-md-3">
+        <div class="card" style="width:250px">
+          <img class="card-img-top rounded" src="Images/door-fiitings.jpg" alt="Card image" style="width:100%" />
+          <div class="card-body">
+            <h4 class="card-title">Door-Fittings</h4>
+
+            <p class="card-text">Price : Each fitting has its own price: Kshs 250</p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#fit3">MORE</a>
+
+            <div id="fit3" class="collapse multi-collapse">
+              <hr />
+              <p>Description: Silvered, Non-silvered fittings and door bolts</p>
+              <p>Store location: Kumar fittings, Mombasa Rd </p>
+              <p>Contact: 0796123852</p>
+
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#fittingProduct3">ORDER</a>
+              <div class="modal fade" id="fittingProduct3" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        Door-Fittings
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="doorForm">
+                        <div class="form-group">
+                          <label for="quantity1">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantityfit3" name="quantityfit3" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="submit" id="doorBtn" class="btn btn-warning" data-dismiss="modal">
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Window-fittings -->
+      <div class="col-md-3">
+        <div class="card" style="width:250px">
+          <img class="card-img-top rounded" src="Images/window.jpg" alt="Card image" style="width:100%" />
+          <div class="card-body">
+            <h4 class="card-title">Window-fittings</h4>
+
+            <p class="card-text">Price : Determined by the size of the fitting Ksh 680
+
+
+            </p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#fit4">MORE</a>
+
+            <div id="fit4" class="collapse multi-collapse">
+              <hr />
+              <p>Description: Goldish and grey</p>
+              <p>Store location: CMW, Dandora</p>
+              <p>Contact: 0774456123</p>
+
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#fittingProduct4">ORDER</a>
+              <div class="modal fade" id="fittingProduct4" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        Window Fittings
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="windowForm">
+                        <div class="form-group">
+                          <label for="quantity1">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantityfit4" name="quantityfit4" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="submit" id="windowBtn" class="btn btn-warning" data-dismiss="modal">
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- End of Fittings -->
+  <hr>
+  <!-- Electrical appliances -->
+  <div style="padding: 2%;" id="electrical">
+    <h1 id="hot5" class="display-5">ELECTRICAL APPLIANCES</h1>
+    <div class="row">
+
+      <!-- electric pipes -->
+      <div class="col-md-3">
+        <div class="card" style="width:250px">
+          <img class="card-img-top rounded" src="Images/electric-pipes.jpg" alt="Card image" style="width:100%" />
+          <div class="card-body">
+            <h4 class="card-title">Electric-pipes</h4>
+
+            <p class="card-text">Price : Kshs 120 per 8m long pipe</p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#electric1">MORE</a>
+
+            <div id="electric1" class="collapse multi-collapse">
+              <hr />
+              <p>Description: With connecters included</p>
+              <p>Store location: Jiji pipes, Athi River</p>
+              <p>Contact: 0795789456</p>
+
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#electricProduct1">ORDER</a>
+              <div class="modal fade" id="electricProduct1" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        Electric-pipes
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="epipeForm">
+                        <div class="form-group">
+                          <label for="quantity1">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantityElectric1" name="quantityElectric1" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="submit" id="ePipeBtn" class="btn btn-warning" data-dismiss="modal">
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- cables        -->
+      <div class="col-md-3">
+        <div class="card" style="width:250px">
+          <img class="card-img-top rounded" src="Images/cables.jpg" alt="Card image" style="width:100%" />
+          <div class="card-body">
+            <h4 class="card-title">Cables</h4>
+
+            <p class="card-text">Price : Kshs 9000 copper roll,
+              Ksh 5000 aluminium </p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#electric2">MORE</a>
+
+            <div id="electric2" class="collapse multi-collapse">
+              <hr />
+              <p>Description: </p>
+              <p>Store location: EAC, Industrial area</p>
+              <p>Contact: 0710147258</p>
+
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#electricProduct2">ORDER</a>
+              <div class="modal fade" id="electricProduct2" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        Cables
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="cableForm">
+                        <div class="form-group">
+                          <label for="quantity1">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantityElectric2" name="quantityElectric2" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="submit" id="cableBtn" class="btn btn-warning" data-dismiss="modal">
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- sockets -->
+      <div class="col-md-3">
+        <div class="card" style="width:250px">
+          <img class="card-img-top rounded" src="Images/socket.png" alt="Card image" style="width:100%" />
+          <div class="card-body">
+            <h4 class="card-title">Sockets</h4>
+
+            <p class="card-text">Price : Kshs 300 twin socket & Kshs.130 single socket</p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#electric3">MORE</a>
+
+            <div id="electric3" class="collapse multi-collapse">
+              <hr />
+              <p>Description: single and twin sockets</p>
+              <p>Store location: Kumar makers, Mombasa Rd </p>
+              <p>Contact: 0796123852</p>
+
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#electricProduct3">ORDER</a>
+              <div class="modal fade" id="electricProduct3" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        Sockets
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="socketsForm">
+                        <div class="form-group">
+                          <label for="quantity1">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantityElectric3" name="quantityElectric3" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="submit" id="socketsBtn" class="btn btn-warning" data-dismiss="modal">
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fuses -->
+      <div class="col-md-3">
+        <div class="card" style="width:250px">
+          <img class="card-img-top rounded" src="Images/fuses.png" alt="Card image" style="width:100%" />
+          <div class="card-body">
+            <h4 class="card-title">Fuses</h4>
+
+            <p class="card-text">Price : R016-Ksh.200, R022-Ksh.450,class G-Ksh.1500
+
+            </p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#electric4">MORE</a>
+
+            <div id="electric4" class="collapse multi-collapse">
+              <hr />
+              <p>Description:R014,R015,R020,R025,CLASS G,MINI-FUSES</p>
+              <P>Store Location: Kibicho fuses, Kayole Junction</P>
+              <p>Contact: 0774456123</p>
+
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#electricProduct4">ORDER</a>
+              <div class="modal fade" id="electricProduct4" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        Fuses
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="fuseForm">
+                        <div class="form-group">
+                          <label for="quantity1">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantityElectric4" name="quantityElectric4" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="submit" id="fuseBtn" class="btn btn-warning" data-dismiss="modal">
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- End of Eletrical Appliances -->
+  <hr>
+  <!-- Drainage -->
+  <div style="padding: 2%;" id="drain">
+    <h1 id="hot2" class="display-5">DRAINAGE</h1>
+    <div class="row">
+
+      <!-- Pipes -->
+      <div class="col-md-3">
+        <div class="card" style="width:250px">
+          <img class="card-img-top rounded" src="Images/pipes.jpg" alt="Card image" style="width:100%" />
+          <div class="card-body">
+            <h4 class="card-title">Pipes</h4>
+
+            <p class="card-text">Price : Kshs 1500 per 8m long</p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#drain1">MORE</a>
+
+            <div id="drain1" class="collapse multi-collapse">
+              <hr />
+              <p>Description: All sizes </p>
+              <p>Store location: Mbiti constructors, Athi River</p>
+              <p>Contact: 0795789456</p>
+
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#drainProduct1">ORDER</a>
+              <div class="modal fade" id="drainProduct1" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        Pipes
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="dpipeForm">
+                        <div class="form-group">
+                          <label for="quantity1">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantityDrain1" name="quantityDrain1" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="submit" id="dpipeBtn" class="btn btn-warning" data-dismiss="modal">
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--     Connectors    -->
+      <div class="col-md-3">
+        <div class="card" style="width:250px">
+          <img class="card-img-top rounded" src="Images/connectors.jpeg" alt="Card image" style="width:100%" />
+          <div class="card-body">
+            <h4 class="card-title">Connectors</h4>
+
+            <p class="card-text">Price : Varies depending on the sizes and angles
+            </p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#drain2">MORE</a>
+
+            <div id="drain2" class="collapse multi-collapse">
+              <hr />
+              <p>Description: angle,bend,T</p>
+              <p>Store location:Kamisi, Garra</p>
+              <p>Contact: 0710147258</p>
+
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#drainProduct2">ORDER</a>
+              <div class="modal fade" id="drainProduct2" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        Connectors
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="">
+                        <div class="form-group">
+                          <label for="quantity1">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantityDrain2" name="quantityDrain2" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="submit" id="connectorBtn" class="btn btn-warning" data-dismiss="modal">
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Man-hole Covers -->
+      <div class="col-md-3">
+        <div class="card" style="width:250px">
+          <img class="card-img-top rounded" src="Images/covers.jpg" alt="Card image" style="width:100%" />
+          <div class="card-body">
+            <h4 class="card-title">Manhole-covers</h4>
+
+            <p class="card-text">Price : Varies with size and material type</p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#drain3">MORE</a>
+
+            <div id="drain3" class="collapse multi-collapse">
+              <hr />
+              <p>Description: Pvc,steel</p>
+              <p>Store location: Kanyoi makers, Mombasa Rd </p>
+              <p>Contact: 0796123852</p>
+
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#drainProduct3">ORDER</a>
+              <div class="modal fade" id="drainProduct3" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        Manhole-covers
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="manholeForm">
+                        <div class="form-group">
+                          <label for="quantity1">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantityDrain3" name="quantityDrain3" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="submit" id="manholeBtn" class="btn btn-warning" data-dismiss="modal">
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Septic-tank -->
+      <div class="col-md-3">
+        <div class="card" style="width:250px">
+          <img class="card-img-top rounded" src="Images/tank.jpg" alt="Card image" style="width:100%" />
+          <div class="card-body">
+            <h4 class="card-title">Septic-Tanks</h4>
+
+            <p class="card-text">Price : PVC Ksh.46,000, concrete tank Ksh.70,000
+
+
+            </p>
+
+            <a href="#" class="btn-outline-warning" data-toggle="collapse" data-target="#drain4">MORE</a>
+
+            <div id="drain4" class="collapse multi-collapse">
+              <hr />
+              <p>Description:PVC rugged and Concrete</p>
+              <p>Store location: Drainers Ltd, Kibera</p>
+              <p>Contact: 0774456123</p>
+
+              <a href="#" class="btn btn-outline-warning" data-toggle="modal" data-target="#drainProduct4">ORDER</a>
+              <div class="modal fade" id="drainProduct4" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        Septic-Tanks
+                      </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="septicForm">
+                        <div class="form-group">
+                          <label for="quantity1">Enter Quantity</label>
+                          <input type="number" class="form-control" id="quantityDrain4" name="quantityDrain4" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                      </button>
+                      <button type="submit" id="septicBtn" class="btn btn-warning" data-dismiss="modal">
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  </div>
+
+  <hr>
+</body>
+
+</html>
