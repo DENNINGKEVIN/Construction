@@ -27,6 +27,7 @@ body{
   animation: mymove 5s infinite;
   padding: 1%;
   
+  
 }
 @keyframes mymove {
   0%, 20%, 50%, 80%, 100% {
@@ -38,4 +39,21 @@ body{
   60% {
     transform: translateY(-45px);
   }
+}
+#showOrders {
+  display: none;
+}
+
+.myOrders{
+  cursor: pointer;
+
+}
+
+.myOrders:hover {
+  text-decoration: underline;
+}  
+
+#showTotal {
+  text-align: center;
+  
 }
