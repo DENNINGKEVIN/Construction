@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <link rel="shortcut icon" href="Images/logo.jpeg" >
+  <link rel="shortcut icon" href="Images/logo.jpeg">
   <meta charset="utf-8">
   <title>Login</title>
   <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
@@ -12,17 +12,18 @@
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="js/scriptslogin.js"></script>
 </head>
 
 <body>
 
 
-  <div class="cotn_principal" >
+  <div class="cotn_principal">
     <img src="Images/logo.jpeg" alt="" id="img">
     <h1>JENGA</h1>
     <div class="cont_centrar">
 
-      <div class="cont_login" >
+      <div class="cont_login">
         <div class="cont_info_log_sign_up">
           <div class="col_md_login">
             <div class="cont_ba_opcitiy">
@@ -62,18 +63,18 @@
           <div class="cont_form_login">
             <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons"></i></a>
             <h2>LOGIN</h2>
-            <input type="text" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <input type="text" placeholder="Email" id="email"/>
+            <input type="password" placeholder="Password" class="message"/>
             <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
           </div>
 
           <div class="cont_form_sign_up">
             <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons"></i></a>
             <h2>SIGN UP</h2>
-            <input type="text" placeholder="Email" />
-            <input type="text" placeholder="User" />
-            <input type="password" placeholder="Password" />
-            <input type="password" placeholder="Confirm Password" />
+            <input type="text" placeholder="Email" id="email" />
+            <input type="text" placeholder="User" id="name"/>
+            <input type="password" placeholder="Password" class="message"/>
+            <input type="password" placeholder="Confirm Password" class="message"/>
             <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
 
           </div>
@@ -130,6 +131,7 @@
       }, 500);
 
     }
+
 
 
 
